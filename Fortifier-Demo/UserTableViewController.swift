@@ -51,7 +51,7 @@ class UserTableViewController: UITableViewController {
         let name = user.firstName + " " + user.lastName
         cell.nameLabel.text = name
         cell.photoImageView.image = user.photo
-        cell.dobLabel.text = user.dob
+       // cell.dobLabel.text = user.dob
         cell.genderLabel.text = user.gender
         
         return cell

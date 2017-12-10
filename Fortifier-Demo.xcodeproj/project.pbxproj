@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06FF48E41FDDE673001CF0D9 /* aboutzodiacsign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FF48E31FDDE673001CF0D9 /* aboutzodiacsign.swift */; };
 		129EC8C21FDDA8B700A5D694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129EC8C11FDDA8B700A5D694 /* AppDelegate.swift */; };
 		129EC8C41FDDA8B700A5D694 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129EC8C31FDDA8B700A5D694 /* ViewController.swift */; };
 		129EC8C71FDDA8B700A5D694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129EC8C51FDDA8B700A5D694 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06FF48E31FDDE673001CF0D9 /* aboutzodiacsign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutzodiacsign.swift; sourceTree = "<group>"; };
 		129EC8BE1FDDA8B700A5D694 /* Fortifier-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fortifier-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		129EC8C11FDDA8B700A5D694 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		129EC8C31FDDA8B700A5D694 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				129EC8C11FDDA8B700A5D694 /* AppDelegate.swift */,
 				129EC8C31FDDA8B700A5D694 /* ViewController.swift */,
 				129EC8F71FDDD5AB00A5D694 /* UserTableViewController.swift */,
+				06FF48E31FDDE673001CF0D9 /* aboutzodiacsign.swift */,
 				129EC8C51FDDA8B700A5D694 /* Main.storyboard */,
 				129EC8EF1FDDAF3400A5D694 /* User.swift */,
 				129EC8C81FDDA8B700A5D694 /* Assets.xcassets */,
@@ -270,6 +273,7 @@
 			files = (
 				129EC8F81FDDD5AB00A5D694 /* UserTableViewController.swift in Sources */,
 				129EC8F41FDDCD0900A5D694 /* UserTableViewCell.swift in Sources */,
+				06FF48E41FDDE673001CF0D9 /* aboutzodiacsign.swift in Sources */,
 				129EC8C41FDDA8B700A5D694 /* ViewController.swift in Sources */,
 				129EC8C21FDDA8B700A5D694 /* AppDelegate.swift in Sources */,
 				129EC8F01FDDAF3400A5D694 /* User.swift in Sources */,
@@ -439,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 783C7286BX;
 				INFOPLIST_FILE = "Fortifier-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.nyu.cs.jd.Fortifier-Demo";
@@ -453,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 783C7286BX;
 				INFOPLIST_FILE = "Fortifier-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.nyu.cs.jd.Fortifier-Demo";

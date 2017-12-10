@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xtW-Jk-tF2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,6 +24,9 @@
                                 <state key="normal" title="About Zodiac Sign">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="pGQ-fk-r1Z" kind="modal" id="R5e-mi-3er"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqr-PG-498">
                                 <rect key="frame" x="124" y="374" width="127" height="65"/>
@@ -205,6 +208,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsy-JH-jCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1469.5999999999999" y="130.78817733990149"/>
+        </scene>
+        <!--About Zodiac Sign-->
+        <scene sceneID="OvV-4Q-gv5">
+            <objects>
+                <viewController id="pGQ-fk-r1Z" userLabel="About Zodiac Sign" customClass="aboutzodiacsign" customModule="Fortifier_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l8y-9E-ajK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="12" translatesAutoresizingMaskIntoConstraints="NO" id="aAx-mC-qse">
+                                <rect key="frame" x="0.0" y="751" width="375" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="pGQ-fk-r1Z" eventType="valueChanged" id="2Iu-Eh-XcJ"/>
+                                </connections>
+                            </pageControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ucJ-fA-1Tx">
+                                <rect key="frame" x="0.0" y="78" width="375" height="665"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2X3-8N-AM0">
+                                <rect key="frame" x="16" y="44" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="u4X-e3-ITZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="Ff8-oJ-pok"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xHf-x3-AVi" appends="YES" id="ARJ-U7-y6T"/>
+                            <outletCollection property="gestureRecognizers" destination="2kC-ph-R6W" appends="YES" id="g59-Q5-C5g"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="ucJ-fA-1Tx" id="cJ0-gJ-4Or"/>
+                        <outlet property="leftSwipe" destination="xHf-x3-AVi" id="6YE-w1-U1r"/>
+                        <outlet property="pageControl" destination="aAx-mC-qse" id="yFP-VF-O6u"/>
+                        <outlet property="rightSwipe" destination="2kC-ph-R6W" id="LLS-S1-i5b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1a-CK-GsG" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="2kC-ph-R6W">
+                    <connections>
+                        <action selector="rightswipedone:" destination="pGQ-fk-r1Z" id="6Pe-ag-kXc"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="xHf-x3-AVi">
+                    <connections>
+                        <action selector="leftswipedone:" destination="pGQ-fk-r1Z" id="sT1-Uf-hv5"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="197" y="1292"/>
         </scene>
     </scenes>
     <resources>
