@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06BD515C1FDF3EB800210712 /* tarotcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BD515B1FDF3EB800210712 /* tarotcard.swift */; };
 		06FF48E41FDDE673001CF0D9 /* aboutzodiacsign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FF48E31FDDE673001CF0D9 /* aboutzodiacsign.swift */; };
 		121103451FDE300400A6C6AC /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121103441FDE300400A6C6AC /* AddUserViewController.swift */; };
 		129EC8C21FDDA8B700A5D694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129EC8C11FDDA8B700A5D694 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06BD515B1FDF3EB800210712 /* tarotcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tarotcard.swift; sourceTree = "<group>"; };
 		06FF48E31FDDE673001CF0D9 /* aboutzodiacsign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutzodiacsign.swift; sourceTree = "<group>"; };
 		121103441FDE300400A6C6AC /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		129EC8BE1FDDA8B700A5D694 /* Fortifier-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fortifier-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 				129EC8C31FDDA8B700A5D694 /* ViewController.swift */,
 				129EC8F71FDDD5AB00A5D694 /* UserTableViewController.swift */,
 				06FF48E31FDDE673001CF0D9 /* aboutzodiacsign.swift */,
+				06BD515B1FDF3EB800210712 /* tarotcard.swift */,
 				129EC8C51FDDA8B700A5D694 /* Main.storyboard */,
 				121103441FDE300400A6C6AC /* AddUserViewController.swift */,
 				12B7AE1A1FDE0FDF00F85FEF /* FortuneViewController.swift */,
@@ -282,6 +285,7 @@
 				06FF48E41FDDE673001CF0D9 /* aboutzodiacsign.swift in Sources */,
 				12B7AE1B1FDE0FDF00F85FEF /* FortuneViewController.swift in Sources */,
 				129EC8C41FDDA8B700A5D694 /* ViewController.swift in Sources */,
+				06BD515C1FDF3EB800210712 /* tarotcard.swift in Sources */,
 				121103451FDE300400A6C6AC /* AddUserViewController.swift in Sources */,
 				129EC8C21FDDA8B700A5D694 /* AppDelegate.swift in Sources */,
 				129EC8F01FDDAF3400A5D694 /* User.swift in Sources */,

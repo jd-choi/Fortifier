@@ -349,7 +349,4 @@
         <image name="capricorn" width="82" height="100"/>
         <image name="defaultPhoto" width="320" height="320"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="R5e-mi-3er"/>
-    </inferredMetricsTieBreakers>
 </document>
