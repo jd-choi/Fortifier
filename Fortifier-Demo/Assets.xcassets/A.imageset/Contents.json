@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "card_creature_bear.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "card_creature_bear@2x.png",
+      "filename" : "A.jpg",
       "scale" : "2x"
     },
     {

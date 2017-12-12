@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 enum CardType: Int{
-    case a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+    case a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p//,q,r,s,t,u,v,w,x,y,z
 }
 
 
@@ -24,7 +24,7 @@ class tarotcard : SKSpriteNode{
     let cardType :CardType
     let frontTexture :SKTexture
     let backTexture :SKTexture
-  
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported")
@@ -34,7 +34,7 @@ class tarotcard : SKSpriteNode{
         self.cardType = cardType
         backTexture = SKTexture(imageNamed: "card_back")
         
-       
+        
         
         switch cardType {
         case .a:
@@ -85,36 +85,37 @@ class tarotcard : SKSpriteNode{
         case .p:
             frontTexture = SKTexture(imageNamed: "P")
             largeTextureFilename = "P_large"
-        case .q:
-            frontTexture = SKTexture(imageNamed: "Q")
-            largeTextureFilename = "Q_large"
-        case .r:
-            frontTexture = SKTexture(imageNamed: "R")
-            largeTextureFilename = "R_large"
-        case .s:
-            frontTexture = SKTexture(imageNamed: "S")
-            largeTextureFilename = "S_large"
-        case .t:
-            frontTexture = SKTexture(imageNamed: "T")
-            largeTextureFilename = "T_large"
-        case .u:
-            frontTexture = SKTexture(imageNamed: "U")
-            largeTextureFilename = "U_large"
-        case .v:
-            frontTexture = SKTexture(imageNamed: "V")
-            largeTextureFilename = "V_large"
-        case .w:
-            frontTexture = SKTexture(imageNamed: "W")
-            largeTextureFilename = "W_large"
-        case .x:
-            frontTexture = SKTexture(imageNamed: "X")
-            largeTextureFilename = "X_large"
-        case .y:
-            frontTexture = SKTexture(imageNamed: "Y")
-            largeTextureFilename = "Y_large"
-        case .z:
-            frontTexture = SKTexture(imageNamed: "Z")
-            largeTextureFilename = "Z_large"
+            /* case .q:
+             frontTexture = SKTexture(imageNamed: "Q")
+             largeTextureFilename = "Q_large"
+             case .r:
+             frontTexture = SKTexture(imageNamed: "R")
+             largeTextureFilename = "R_large"
+             case .s:
+             frontTexture = SKTexture(imageNamed: "S")
+             largeTextureFilename = "S_large"
+             case .t:
+             frontTexture = SKTexture(imageNamed: "T")
+             largeTextureFilename = "T_large"
+             case .u:
+             frontTexture = SKTexture(imageNamed: "U")
+             largeTextureFilename = "U_large"
+             case .v:
+             frontTexture = SKTexture(imageNamed: "V")
+             largeTextureFilename = "V_large"
+             case .w:
+             frontTexture = SKTexture(imageNamed: "W")
+             largeTextureFilename = "W_large"
+             case .x:
+             frontTexture = SKTexture(imageNamed: "X")
+             largeTextureFilename = "X_large"
+             case .y:
+             frontTexture = SKTexture(imageNamed: "Y")
+             largeTextureFilename = "Y_large"
+             case .z:
+             frontTexture = SKTexture(imageNamed: "Z")
+             largeTextureFilename = "Z_large"
+             */
         }
         
         super.init(texture: backTexture, color: .clear, size: frontTexture.size())
@@ -160,7 +161,7 @@ class tarotcard : SKSpriteNode{
                 texture = largeTexture
             }
             
-            //zPosition = CardLevel.enlarged.rawValue
+            zPosition = CardLevel.enlarged.rawValue
             
             if let parent = parent {
                 removeAllActions()
@@ -174,4 +175,5 @@ class tarotcard : SKSpriteNode{
     }
     
 }
+
 

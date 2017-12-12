@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "card_creature_dragon_large.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "card_creature_dragon_large@2x.png",
+      "filename" : "B_large.jpg",
       "scale" : "2x"
     },
     {
