@@ -21,7 +21,7 @@ class FortuneViewController: UIViewController {
         imageViewBackground.contentMode = UIViewContentMode.scaleToFill
         self.view.addSubview(imageViewBackground)
         self.view.sendSubview(toBack: imageViewBackground)
-        todayFortune.text = "You have always been generous by nature, but your benevolent attitude will do you no good, warns Ganesha. People will try, almost blatantly, to take advantage of you, and for once, you will feel that being crafty and unrelenting would have helped kept those blood-sucking leeches at bay. But as the day progresses, you will thank the Almighty for all the precious things he made you the guardian of. Your trust in Him will remain unshaken."
+        todayFortune.text = "You're not somebody who would do something just for the sake of doing it. In fact, your desire to achieve your dreams will lead you towards putting your best foot forward and probably setting up a new business venture. Today, you'll also get done with some old assignments or projects, says Ganesha."
         todayFortune.numberOfLines = 0
         todayFortune.preferredMaxLayoutWidth = 700
         todayFortune.lineBreakMode=NSLineBreakMode.byWordWrapping

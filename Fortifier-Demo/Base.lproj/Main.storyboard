@@ -180,9 +180,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="guA-gy-ZgG">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" red="0.21888673920000001" green="0.156245733" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </textAttributes>
                             <items>
                                 <navigationItem title="User" id="zK9-BU-HZj">
                                     <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="gbg-Wq-5cf">
@@ -335,6 +340,10 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTC-8K-W5i">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.21888673920000001" green="0.156245733" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Add User" id="Uxb-aw-tdy">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dj0-D1-oos">
@@ -399,7 +408,7 @@
                                 <rect key="frame" x="39" y="143" width="85" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INl-qY-7Fp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dennis Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INl-qY-7Fp">
                                 <rect key="frame" x="155" y="143" width="182" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -413,7 +422,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4am-89-7fQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4am-89-7fQ">
                                 <rect key="frame" x="155" y="199" width="182" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -423,9 +432,13 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QAn-T1-RQ4">
                                 <rect key="frame" x="0.0" y="34" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.21888673920000001" green="0.156245733" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Today's Fortune" id="fAE-1i-IqB">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="gez-Js-ytd">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="gez-Js-ytd">
                                             <connections>
                                                 <segue destination="2dE-K4-5E5" kind="presentation" id="Ucs-xH-zfg"/>
                                             </connections>
@@ -451,7 +464,7 @@
         <image name="defaultPhoto" width="320" height="320"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NIa-hJ-etW"/>
+        <segue reference="Ucs-xH-zfg"/>
         <segue reference="B8F-jk-Cp4"/>
     </inferredMetricsTieBreakers>
 </document>

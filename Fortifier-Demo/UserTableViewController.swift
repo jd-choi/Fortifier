@@ -29,18 +29,15 @@ class UserTableViewController: UITableViewController {
     
     private func loadSampleUsers() {
         let photo1 = UIImage(named: "taurus")
-        let photo2 = UIImage(named: "libra")
+        let photo2 = UIImage(named: "capricorn")
         let date1 = NSDate()
-        
         let date2 = NSDate()
-        
-        
         guard let user1 = User(firstName: "JD", lastName: "Choi", gender: "Male", dob: date1,
                                zodiac: "taurus", photo : photo1) else {
                                 fatalError("Unable to instantiate user1")
         }
         guard let user2 = User(firstName: "Dennis", lastName: "Park", gender: "Male", dob: date2,
-                               zodiac: "libra", photo : photo2) else {
+                               zodiac: "capricorn", photo : photo2) else {
                                 fatalError("Unable to instantiate user2")
         }
         users += [user1, user2]
