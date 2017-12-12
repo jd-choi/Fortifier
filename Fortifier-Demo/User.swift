@@ -18,19 +18,6 @@ class User: NSObject, NSCoding {
     var zodiac: String
     var photo: UIImage?
     
-    struct PropertyKey {
-        static let firstName = "firstName"
-        static let lastName = "lastName"
-        static let gender = "gender"
-        static let dob = "dob"
-        static let zodiac = "zodiac"
-        static let photo = "photo"
-    }
-    
-    //Mark: Archiving Paths
-    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("users")
-    
     init?(firstName:String, lastName:String, gender:String, dob:NSDate?, zodiac:String, photo:UIImage?) {
         // Initialize should fail if there is no name or dob
         if firstName.isEmpty || lastName.isEmpty || gender.isEmpty || dob == nil {
@@ -43,14 +30,6 @@ class User: NSObject, NSCoding {
         self.dob = dob;
         self.zodiac = zodiac;
         self.photo = photo;
-    }
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(firstName, forKey: PropertyKey.firstName)
-        aCoder.encode(lastName, forKey: PropertyKey.lastName)
-        aCoder.encode(gender, forKey: PropertyKey.gender)
-        aCoder.encode(dob, forKey: PropertyKey.dob)
-        aCoder.encode(zodiac, forKey: PropertyKey.zodiac)
-        aCoder.encode(photo, forKey: PropertyKey.photo)
     }
     required convenience init?(coder aDecoder: NSCoder) {
         guard let firstName = aDecoder.decodeObject(forKey: PropertyKey.firstName) as? String else {
@@ -66,4 +45,28 @@ class User: NSObject, NSCoding {
         
         self.init(firstName: firstName, lastName: lastName!, gender: gender!, dob: dob, zodiac: zodiac!, photo: photo)
     }
+    
+    struct PropertyKey {
+        static let firstName = "firstName"
+        static let lastName = "lastName"
+        static let gender = "gender"
+        static let dob = "dob"
+        static let zodiac = "zodiac"
+        static let photo = "photo"
+    }
+    
+    //Mark: Archiving Paths
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("users")
+    
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(firstName, forKey: PropertyKey.firstName)
+        aCoder.encode(lastName, forKey: PropertyKey.lastName)
+        aCoder.encode(gender, forKey: PropertyKey.gender)
+        aCoder.encode(dob, forKey: PropertyKey.dob)
+        aCoder.encode(zodiac, forKey: PropertyKey.zodiac)
+        aCoder.encode(photo, forKey: PropertyKey.photo)
+    }
+    
 }
