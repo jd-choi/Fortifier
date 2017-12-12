@@ -18,8 +18,6 @@ class TarotCardViewController: UIViewController {
         let scene = tarotcardscene(size: CGSize(width: 1125, height: 2436))
         let skView = self.view as! SKView
         
-        skView.showsFPS = true
-        skView.showsNodeCount = true
         skView.ignoresSiblingOrder = false
         scene.scaleMode = .aspectFill
         skView.presentScene(scene)
