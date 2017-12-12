@@ -12,11 +12,14 @@ import SpriteKit
 enum CardType: Int{
     case a,b,c
 }
-var faceUp = false
-var enlarged = false
-var savedPosition = CGPoint.zero
+
 
 class tarotcard : SKSpriteNode{
+    var faceUp = false
+    var enlarged = false
+    var savedPosition = CGPoint.zero
+    var largeTexture :SKTexture?
+    let largeTextureFilename :String
     let cardType :CardType
     let frontTexture :SKTexture
     let backTexture :SKTexture
@@ -31,13 +34,16 @@ class tarotcard : SKSpriteNode{
         switch cardType {
         case .a:
             frontTexture = SKTexture(imageNamed: "card_creature_wolf")
+            largeTextureFilename = "card_creature_wolf_large"
         case .b:
             frontTexture = SKTexture(imageNamed: "card_creature_bear")
+            largeTextureFilename = "card_creature_bear_large"
         case .c:
             frontTexture = SKTexture(imageNamed: "card_creature_dragon")
+            largeTextureFilename = "card_creature_dragon_large"
         }
         
-        super.init(texture: frontTexture, color: .clear, size: frontTexture.size())
+        super.init(texture: backTexture, color: .clear, size: frontTexture.size())
     }
     func flip() {
         let firstHalfFlip = SKAction.scaleX(to: 0.0, duration: 0.4)
@@ -57,6 +63,37 @@ class tarotcard : SKSpriteNode{
             }
         }
         faceUp = !faceUp
+    }
+    func enlarge() {
+        if enlarged {
+            let slide = SKAction.move(to:savedPosition, duration:0.3)
+            let scaleDown = SKAction.scale(to:1.0, duration:0.3)
+            run(SKAction.group([slide, scaleDown])) {
+                self.enlarged = false
+                self.zPosition = CardLevel.board.rawValue
+            }
+        } else {
+            enlarged = true
+            savedPosition = position
+            
+            if largeTexture != nil {
+                texture = largeTexture
+            } else {
+                largeTexture = SKTexture(imageNamed: largeTextureFilename)
+                texture = largeTexture
+            }
+            
+            zPosition = CardLevel.enlarged.rawValue
+            
+            if let parent = parent {
+                removeAllActions()
+                zRotation = 0
+                let newPosition = CGPoint(x: parent.frame.midX, y: parent.frame.midY)
+                let slide = SKAction.move(to:newPosition, duration:0.3)
+                let scaleUp = SKAction.scale(to:5.0, duration:0.3)
+                run(SKAction.group([slide, scaleUp]))
+            }
+        }
     }
 }
 

@@ -41,9 +41,12 @@
                                 <rect key="frame" x="124" y="493" width="127" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Time Difference">
+                                <state key="normal" title="Tarot Card">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="lwj-hk-1BS" kind="modal" id="avF-6u-1u7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7S8-zH-iz0">
                                 <rect key="frame" x="197" y="121" width="137" height="21"/>
@@ -277,6 +280,34 @@
             </objects>
             <point key="canvasLocation" x="197" y="1292"/>
         </scene>
+        <!--Tarotcardview-->
+        <scene sceneID="o7V-9n-Eed">
+            <objects>
+                <viewController title="Tarotcardview" id="lwj-hk-1BS" customClass="TarotCardViewController" customModule="Fortifier_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="bvd-fk-dT8" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iz6-Qr-r5e">
+                                <rect key="frame" x="16" y="44" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="AcL-dx-r5F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21713453531265259" green="0.352211594581604" blue="0.563881516456604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="sgA-Q0-Yk5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L0i-tt-Khu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037.5999999999999" y="923.64532019704438"/>
+        </scene>
         <!--Fortune View Controller-->
         <scene sceneID="G9k-ar-OIW">
             <objects>
@@ -342,11 +373,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1oK-v9-JiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216.8" y="823.89162561576359"/>
+            <point key="canvasLocation" x="1929" y="817"/>
         </scene>
     </scenes>
     <resources>
         <image name="capricorn" width="82" height="100"/>
         <image name="defaultPhoto" width="320" height="320"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AcL-dx-r5F"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0659B0A11FDF80550083F4C4 /* tarotcardscene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659B0A01FDF80550083F4C4 /* tarotcardscene.swift */; };
+		0659B0A31FDF85BD0083F4C4 /* TarotCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659B0A21FDF85BD0083F4C4 /* TarotCardViewController.swift */; };
 		06BD515C1FDF3EB800210712 /* tarotcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BD515B1FDF3EB800210712 /* tarotcard.swift */; };
 		06FF48E41FDDE673001CF0D9 /* aboutzodiacsign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FF48E31FDDE673001CF0D9 /* aboutzodiacsign.swift */; };
 		121103451FDE300400A6C6AC /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121103441FDE300400A6C6AC /* AddUserViewController.swift */; };
 		129EC8C21FDDA8B700A5D694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129EC8C11FDDA8B700A5D694 /* AppDelegate.swift */; };
 		129EC8C41FDDA8B700A5D694 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129EC8C31FDDA8B700A5D694 /* ViewController.swift */; };
 		129EC8C71FDDA8B700A5D694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129EC8C51FDDA8B700A5D694 /* Main.storyboard */; };
-		129EC8C91FDDA8B700A5D694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 129EC8C81FDDA8B700A5D694 /* Assets.xcassets */; };
 		129EC8CC1FDDA8B700A5D694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129EC8CA1FDDA8B700A5D694 /* LaunchScreen.storyboard */; };
 		129EC8D71FDDA8B700A5D694 /* Fortifier_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129EC8D61FDDA8B700A5D694 /* Fortifier_DemoTests.swift */; };
 		129EC8E21FDDA8B700A5D694 /* Fortifier_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129EC8E11FDDA8B700A5D694 /* Fortifier_DemoUITests.swift */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0659B0A01FDF80550083F4C4 /* tarotcardscene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tarotcardscene.swift; sourceTree = "<group>"; };
+		0659B0A21FDF85BD0083F4C4 /* TarotCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCardViewController.swift; sourceTree = "<group>"; };
 		06BD515B1FDF3EB800210712 /* tarotcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tarotcard.swift; sourceTree = "<group>"; };
 		06FF48E31FDDE673001CF0D9 /* aboutzodiacsign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutzodiacsign.swift; sourceTree = "<group>"; };
 		121103441FDE300400A6C6AC /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +51,6 @@
 		129EC8C11FDDA8B700A5D694 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		129EC8C31FDDA8B700A5D694 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		129EC8C61FDDA8B700A5D694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		129EC8C81FDDA8B700A5D694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		129EC8CB1FDDA8B700A5D694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		129EC8CD1FDDA8B700A5D694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		129EC8D21FDDA8B700A5D694 /* Fortifier-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fortifier-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,11 +119,12 @@
 				129EC8F71FDDD5AB00A5D694 /* UserTableViewController.swift */,
 				06FF48E31FDDE673001CF0D9 /* aboutzodiacsign.swift */,
 				06BD515B1FDF3EB800210712 /* tarotcard.swift */,
+				0659B0A01FDF80550083F4C4 /* tarotcardscene.swift */,
 				129EC8C51FDDA8B700A5D694 /* Main.storyboard */,
 				121103441FDE300400A6C6AC /* AddUserViewController.swift */,
+				0659B0A21FDF85BD0083F4C4 /* TarotCardViewController.swift */,
 				12B7AE1A1FDE0FDF00F85FEF /* FortuneViewController.swift */,
 				129EC8EF1FDDAF3400A5D694 /* User.swift */,
-				129EC8C81FDDA8B700A5D694 /* Assets.xcassets */,
 				129EC8CA1FDDA8B700A5D694 /* LaunchScreen.storyboard */,
 				129EC8CD1FDDA8B700A5D694 /* Info.plist */,
 			);
@@ -254,7 +257,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				129EC8CC1FDDA8B700A5D694 /* LaunchScreen.storyboard in Resources */,
-				129EC8C91FDDA8B700A5D694 /* Assets.xcassets in Resources */,
 				129EC8C71FDDA8B700A5D694 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				129EC8F81FDDD5AB00A5D694 /* UserTableViewController.swift in Sources */,
+				0659B0A11FDF80550083F4C4 /* tarotcardscene.swift in Sources */,
 				129EC8F41FDDCD0900A5D694 /* UserTableViewCell.swift in Sources */,
 				06FF48E41FDDE673001CF0D9 /* aboutzodiacsign.swift in Sources */,
 				12B7AE1B1FDE0FDF00F85FEF /* FortuneViewController.swift in Sources */,
@@ -288,6 +291,7 @@
 				06BD515C1FDF3EB800210712 /* tarotcard.swift in Sources */,
 				121103451FDE300400A6C6AC /* AddUserViewController.swift in Sources */,
 				129EC8C21FDDA8B700A5D694 /* AppDelegate.swift in Sources */,
+				0659B0A31FDF85BD0083F4C4 /* TarotCardViewController.swift in Sources */,
 				129EC8F01FDDAF3400A5D694 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
