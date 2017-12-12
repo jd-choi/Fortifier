@@ -2,7 +2,7 @@
 //  aboutzodiacsign.swift
 //  Fortifier-Demo
 //
-//  Created by Dennis Park on 12/10/17.
+//  Created by Dennis Park on 12/03/17.
 //  Copyright © 2017 NYU. All rights reserved.
 //
 

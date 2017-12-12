@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Fortifier-Demo
 //
-//  Created by JD Choi on 12/10/17.
+//  Created by JD Choi on 12/03/17.
 //  Copyright © 2017 NYU. All rights reserved.
 //
 
