@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -241,7 +241,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Show"/>
                                             <connections>
-                                                <segue destination="7l4-fx-b8S" kind="presentation" id="VjK-AS-5j9"/>
+                                                <segue destination="7l4-fx-b8S" kind="presentation" identifier="toFortuneView" id="VjK-AS-5j9"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -379,7 +379,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m7q-sT-wE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tWX-QN-loA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1469.5999999999999" y="130.78817733990149"/>
+            <point key="canvasLocation" x="1809" y="-7"/>
         </scene>
         <!--Fortune View Controller-->
         <scene sceneID="UFn-L6-diq">
@@ -440,7 +440,7 @@
                                     <navigationItem title="Today's Fortune" id="fAE-1i-IqB">
                                         <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="gez-Js-ytd">
                                             <connections>
-                                                <segue destination="2dE-K4-5E5" kind="presentation" id="Ucs-xH-zfg"/>
+                                                <segue destination="2dE-K4-5E5" kind="presentation" identifier="" id="Ucs-xH-zfg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -451,7 +451,11 @@
                         <viewLayoutGuide key="safeArea" id="SGj-aM-zqW"/>
                     </view>
                     <connections>
+                        <outlet property="dobLabel" destination="KWO-DH-Yn2" id="I64-2y-zFd"/>
+                        <outlet property="genderLabel" destination="4am-89-7fQ" id="PmR-wE-iu2"/>
+                        <outlet property="nameLabel" destination="INl-qY-7Fp" id="IgI-jR-UcC"/>
                         <outlet property="todayFortune" destination="8TG-BK-kyF" id="JCf-ca-t7D"/>
+                        <outlet property="zodiacView" destination="YKr-b6-6Gz" id="KWf-vg-iAf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WcH-lc-BWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -464,7 +468,8 @@
         <image name="defaultPhoto" width="320" height="320"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NIa-hJ-etW"/>
-        <segue reference="u4X-e3-ITZ"/>
+        <segue reference="VjK-AS-5j9"/>
+        <segue reference="Ucs-xH-zfg"/>
+        <segue reference="B8F-jk-Cp4"/>
     </inferredMetricsTieBreakers>
 </document>

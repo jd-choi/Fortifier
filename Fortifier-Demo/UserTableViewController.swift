@@ -51,19 +51,16 @@ class UserTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return users.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "UserTableViewCell"
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier,
                                                        for: indexPath) as? UserTableViewCell else {
                                                         fatalError("The dequeued cell is not an instance of UserTableViewCell.")
@@ -72,7 +69,10 @@ class UserTableViewController: UITableViewController {
         let name = user.firstName + " " + user.lastName
         cell.nameLabel.text = name
         cell.photoImageView.image = user.photo
-        // cell.dobLabel.text = user.dob
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd-yyyy"
+        let dobString = formatter.string(from: user.dob as! Date)
+        cell.dobLabel.text = dobString
         cell.genderLabel.text = user.gender
         
         return cell
@@ -133,15 +133,20 @@ class UserTableViewController: UITableViewController {
      }
      */
     
-    /*
+
      // MARK: - Navigation
-     
+    
      // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "toFortuneView") {
+            let userInfo = users[(tableView.indexPathForSelectedRow?.row)!]
+            print("Hello")
+            print (userInfo.firstName)
+            let vc = segue.destination as! FortuneViewController
+            vc.userInfo = userInfo
+        }
      }
-     */
+ 
     private func saveUser() {
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(users, toFile: User.ArchiveURL.path)
         if isSuccessfulSave {

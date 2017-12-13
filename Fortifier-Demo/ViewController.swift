@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         // get current date and display in the main view
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat="dd/MM/yyyy"
+        formatter.dateFormat="MM/dd/yyyy"
         let result = formatter.string(from: date)
         currentDate.text = result
     }
