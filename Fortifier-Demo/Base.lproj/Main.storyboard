@@ -468,7 +468,6 @@
         <image name="defaultPhoto" width="320" height="320"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VjK-AS-5j9"/>
         <segue reference="Ucs-xH-zfg"/>
         <segue reference="B8F-jk-Cp4"/>
     </inferredMetricsTieBreakers>

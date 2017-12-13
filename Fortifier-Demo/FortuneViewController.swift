@@ -41,20 +41,17 @@ class FortuneViewController: UIViewController {
         }
         do {
             let myHTMLString = try String(contentsOf: myURL, encoding: .ascii)
-//            let separator1 = "<div class='row margin-bottom-0'>"
-            let separator1 = "<p class='margin-top-xs-0' style='font-size:16px;'></p>"
+            let separator1 = "<div class=\"row margin-bottom-0\">"
             let temp = myHTMLString.components(separatedBy: separator1)
-            let separator2 = "<p class='margin-top-xs-0' style='font-size:16px;'>"
-            let temp2 = temp[0].components(separatedBy: separator2)
-            let separator3 = "</p>\n<p id='horoscope_single_sign_ccta_id'>"
+            let separator2 = "</p>"
+            let temp2 = temp[5].components(separatedBy: separator2)
+            let separator3 = "16px;\">"
             let separated = temp2[0].components(separatedBy: separator3)
-//            print(temp[0])
+            todayFortune.text = separated[1]
         } catch let error {
             print ("Error: Something went wrong.")
         }
         
-        
-        todayFortune.text = "You're not somebody who would do something just for the sake of doing it. In fact, your desire to achieve your dreams will lead you towards putting your best foot forward and probably setting up a new business venture. Today, you'll also get done with some old assignments or projects, says Ganesha."
         todayFortune.numberOfLines = 0
         todayFortune.preferredMaxLayoutWidth = 700
         todayFortune.lineBreakMode=NSLineBreakMode.byWordWrapping
