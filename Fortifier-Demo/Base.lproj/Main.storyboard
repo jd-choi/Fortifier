@@ -65,6 +65,17 @@
                                     <segue destination="lwj-hk-1BS" kind="modal" id="avF-6u-1u7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4r-WV-maN">
+                                <rect key="frame" x="124" y="588" width="127" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Saju">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rkG-l5-v0z" kind="presentation" id="ZoL-n3-okf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.28027849740932642" green="0.28027849740932642" blue="0.28027849740932642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -76,6 +87,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="130.78817733990149"/>
+        </scene>
+        <!--Saju View Controller-->
+        <scene sceneID="rWj-qj-7bf">
+            <objects>
+                <viewController id="rkG-l5-v0z" customClass="SajuViewController" customModule="Fortifier_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x1J-PX-4gh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3h-p2-IDm">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.21888673920000001" green="0.156245733" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Saju" id="B1X-9f-9EB">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="D2p-Gx-RUF">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="OHq-31-ms7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vg3-6x-bAt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9d7-w4-h4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-566" y="924"/>
         </scene>
         <!--About Zodiac Sign-->
         <scene sceneID="OvV-4Q-gv5">
@@ -469,6 +514,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ucs-xH-zfg"/>
-        <segue reference="B8F-jk-Cp4"/>
+        <segue reference="OHq-31-ms7"/>
     </inferredMetricsTieBreakers>
 </document>

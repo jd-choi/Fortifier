@@ -15,6 +15,7 @@ class User: NSObject, NSCoding {
     var lastName: String
     var gender: String
     var dob: NSDate?
+    var lunarDob: NSDate?
     var zodiac: String
     var photo: UIImage?
     
