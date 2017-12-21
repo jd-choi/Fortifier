@@ -12,9 +12,14 @@ class SajuViewController: UIViewController {
     @IBOutlet weak var lunarLabel: UILabel!
     @IBOutlet weak var userInfoLabel: UILabel!
     var users = [User]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        users = loadUsers()!
+        do {
+            users = loadUsers()!
+        } catch let error {
+            print ("Error: Something went wrong.")
+        }
         let width = UIScreen.main.bounds.size.width
         let height = UIScreen.main.bounds.size.height
         let imageViewBackground = UIImageView(frame: CGRect(x:0,y:0,width:width,height:height))
@@ -27,12 +32,13 @@ class SajuViewController: UIViewController {
             lunarLabel.text = "No Info"
         }
         else {
+            users = loadUsers()!
             let lunarDob = getLunarDate(solarDate: users[0].dob as! NSDate)
             let calendar = Calendar.current
             let components = calendar.dateComponents([.month,.day,.year], from: users[0].dob as! Date)
             print(components.year!)
             lunarLabel.text = lunarDob + "/" + String(describing: components.year!)
-            userInfoLabel.text = "Hello, " + users[0].firstName + ". We have calculated your lunar date of birth according to your date of birth. Your lunar birth day is. We will use this information in order to create saju fortune. We are currently working on saju fortune, so please come back later! Thank you."
+            userInfoLabel.text = "Hello, " + users[0].firstName + ". We have calculated your lunar date of birth according using the dob you have provided. Your lunar birth day is written above. We are currently working on saju fortune, so please come back later! We will be able to generate saju fortune using your lunar dob! Thank you. \n-Fortifier-"
         }
         userInfoLabel.numberOfLines = 0
         userInfoLabel.preferredMaxLayoutWidth = 700
