@@ -130,6 +130,10 @@ class UserTableViewController: UITableViewController {
             let vc = segue.destination as! FortuneViewController
             vc.userInfo = userInfo
         }
+        if (segue.identifier == "toHomeView") {
+            let vc = segue.destination as! ViewController
+            vc.users = users
+        }
      }
  
     private func saveUser() {

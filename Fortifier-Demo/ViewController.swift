@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var currentDate: UILabel!
-    
+    var users = [User]()
     override func viewDidLoad() {
         super.viewDidLoad()
         let width = UIScreen.main.bounds.size.width
@@ -32,6 +32,13 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "toSajuView") {
+            let vc = segue.destination as! SajuViewController
+            vc.users = users
+        }
     }
 
 

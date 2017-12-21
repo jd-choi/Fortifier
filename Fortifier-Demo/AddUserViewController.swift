@@ -68,6 +68,7 @@ class AddUserViewController: UIViewController, UITextFieldDelegate {
         let lastName = lastNameTF.text
         let dob = dobPicker.date
         let lunarDob = getLunarDate(solarDate: dob as NSDate)
+        print(lunarDob)
         let gender = genderTF.text
         let calendar = Calendar.current
         var zodiac = ""
@@ -170,8 +171,6 @@ class AddUserViewController: UIViewController, UITextFieldDelegate {
         }
         
         user = User(firstName: firstName!, lastName: lastName!, gender: gender!, dob: dob as NSDate, lunarDob: lunarDob, zodiac: zodiac, photo: UIImage(named: zodiac))
-        print("Testing")
-        print(lunarDob)
     }
     
     //MARK: Private Methods
@@ -182,10 +181,10 @@ class AddUserViewController: UIViewController, UITextFieldDelegate {
     func getLunarDate(solarDate: NSDate) -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US")
-        formatter.dateFormat = "MM/dd/yyyy"
         formatter.calendar = Calendar(identifier: Calendar.Identifier.chinese)
+//        formatter.dateFormat = "MM/dd/yyyy"
+        formatter.dateStyle = .medium
         return formatter.string(from: solarDate as Date)
-        
         
     }
     

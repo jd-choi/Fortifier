@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -73,7 +73,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rkG-l5-v0z" kind="presentation" id="ZoL-n3-okf"/>
+                                    <segue destination="rkG-l5-v0z" kind="presentation" identifier="toSajuView" id="ZoL-n3-okf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -113,14 +113,39 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU0-Zq-5SI">
+                                <rect key="frame" x="61" y="264" width="253" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lunar DOB:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0N-bP-QRN">
+                                <rect key="frame" x="61" y="173" width="122" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crK-Eh-4s0">
+                                <rect key="frame" x="202" y="179" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vg3-6x-bAt"/>
                     </view>
+                    <connections>
+                        <outlet property="lunarLabel" destination="crK-Eh-4s0" id="UpJ-fd-ofi"/>
+                        <outlet property="userInfoLabel" destination="cU0-Zq-5SI" id="O8B-6U-v43"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9d7-w4-h4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-566" y="924"/>
+            <point key="canvasLocation" x="-567.20000000000005" y="923.64532019704438"/>
         </scene>
         <!--About Zodiac Sign-->
         <scene sceneID="OvV-4Q-gv5">
@@ -237,7 +262,7 @@
                                 <navigationItem title="User" id="zK9-BU-HZj">
                                     <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="gbg-Wq-5cf">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" id="B8F-jk-Cp4"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="toHomeView" id="B8F-jk-Cp4"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem key="rightBarButtonItem" systemItem="add" id="eA8-sj-aAe">
@@ -308,7 +333,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWO-1a-XNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824.79999999999995" y="130.78817733990149"/>
+            <point key="canvasLocation" x="1057" y="119"/>
         </scene>
         <!--Add User View Controller-->
         <scene sceneID="cEv-wW-TUM">
@@ -513,7 +538,7 @@
         <image name="defaultPhoto" width="320" height="320"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ucs-xH-zfg"/>
-        <segue reference="OHq-31-ms7"/>
+        <segue reference="NIa-hJ-etW"/>
+        <segue reference="B8F-jk-Cp4"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,7 +9,9 @@
 import UIKit
 
 class SajuViewController: UIViewController {
-
+    @IBOutlet weak var lunarLabel: UILabel!
+    @IBOutlet weak var userInfoLabel: UILabel!
+    var users = [User]()
     override func viewDidLoad() {
         super.viewDidLoad()
         let width = UIScreen.main.bounds.size.width
@@ -19,7 +21,22 @@ class SajuViewController: UIViewController {
         imageViewBackground.contentMode = UIViewContentMode.scaleToFill
         self.view.addSubview(imageViewBackground)
         self.view.sendSubview(toBack: imageViewBackground)
-        // Do any additional setup after loading the view.
+        if (users.count == 0) {
+            userInfoLabel.text = "In order to use this page, you should go to Today's fortune view and add a user and comback. If you already added some user(s), please go to today's fortune and come back to this page again."
+            lunarLabel.text = "No Info"
+        }
+        else {
+            let lunarDob = getLunarDate(solarDate: users[0].dob as! NSDate)
+            let calendar = Calendar.current
+            let components = calendar.dateComponents([.month,.day,.year], from: users[0].dob as! Date)
+            print(components.year!)
+            lunarLabel.text = lunarDob + "/" + String(describing: components.year!)
+            userInfoLabel.text = "Hello, " + users[0].firstName + ". We have calculated your lunar date of birth according to your date of birth. Your lunar birth day is. We will use this information in order to create saju fortune. We are currently working on saju fortune, so please come back later! Thank you."
+        }
+        userInfoLabel.numberOfLines = 0
+        userInfoLabel.preferredMaxLayoutWidth = 700
+        userInfoLabel.lineBreakMode=NSLineBreakMode.byWordWrapping
+        userInfoLabel.sizeToFit()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +44,16 @@ class SajuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func getLunarDate(solarDate: NSDate) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US")
+//        formatter.dateStyle = .medium
+        formatter.calendar = Calendar(identifier: Calendar.Identifier.chinese)
+        formatter.dateFormat = "MM/dd"
+        print("Testing")
+        print(solarDate)
+        return formatter.string(from: solarDate as Date)
+    }
     /*
     // MARK: - Navigation
 
