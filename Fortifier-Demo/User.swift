@@ -47,7 +47,7 @@ class User: NSObject, NSCoding {
         let dob = aDecoder.decodeObject(forKey: PropertyKey.dob) as? NSDate
         let lunarDob = aDecoder.decodeObject(forKey: PropertyKey.lunarDob) as? String
         
-        self.init(firstName: firstName, lastName: lastName!, gender: gender!, dob: dob, lunarDob: lunarDob!, zodiac: zodiac!, photo: photo)
+        self.init(firstName: firstName, lastName: lastName!, gender: gender!, dob: dob, lunarDob: "", zodiac: zodiac!, photo: photo)
     }
     
     struct PropertyKey {
