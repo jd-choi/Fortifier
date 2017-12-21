@@ -10,16 +10,17 @@
 import UIKit
 import os.log
 
+
 class User: NSObject, NSCoding {
     var firstName: String
     var lastName: String
     var gender: String
     var dob: NSDate?
-    var lunarDob: NSDate?
+    var lunarDob: String
     var zodiac: String
     var photo: UIImage?
     
-    init?(firstName:String, lastName:String, gender:String, dob:NSDate?, zodiac:String, photo:UIImage?) {
+    init?(firstName:String, lastName:String, gender:String, dob:NSDate?, lunarDob:String, zodiac:String, photo:UIImage?) {
         // Initialize should fail if there is no name or dob
         if firstName.isEmpty || lastName.isEmpty || gender.isEmpty || dob == nil {
             return nil
@@ -29,6 +30,7 @@ class User: NSObject, NSCoding {
         self.lastName = lastName;
         self.gender = gender;
         self.dob = dob;
+        self.lunarDob = lunarDob;
         self.zodiac = zodiac;
         self.photo = photo;
     }
@@ -43,8 +45,9 @@ class User: NSObject, NSCoding {
         let lastName = aDecoder.decodeObject(forKey: PropertyKey.lastName) as? String
         let gender = aDecoder.decodeObject(forKey: PropertyKey.gender) as? String
         let dob = aDecoder.decodeObject(forKey: PropertyKey.dob) as? NSDate
+        let lunarDob = aDecoder.decodeObject(forKey: PropertyKey.lunarDob) as? String
         
-        self.init(firstName: firstName, lastName: lastName!, gender: gender!, dob: dob, zodiac: zodiac!, photo: photo)
+        self.init(firstName: firstName, lastName: lastName!, gender: gender!, dob: dob, lunarDob: lunarDob!, zodiac: zodiac!, photo: photo)
     }
     
     struct PropertyKey {
@@ -54,6 +57,7 @@ class User: NSObject, NSCoding {
         static let dob = "dob"
         static let zodiac = "zodiac"
         static let photo = "photo"
+        static let lunarDob = "lunarDob"
     }
     
     //Mark: Archiving Paths
@@ -68,6 +72,10 @@ class User: NSObject, NSCoding {
         aCoder.encode(dob, forKey: PropertyKey.dob)
         aCoder.encode(zodiac, forKey: PropertyKey.zodiac)
         aCoder.encode(photo, forKey: PropertyKey.photo)
+        aCoder.encode(lunarDob, forKey: PropertyKey.lunarDob)
     }
+    
+    
+    
     
 }
