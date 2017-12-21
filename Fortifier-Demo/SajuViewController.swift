@@ -14,6 +14,7 @@ class SajuViewController: UIViewController {
     var users = [User]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        users = loadUsers()!
         let width = UIScreen.main.bounds.size.width
         let height = UIScreen.main.bounds.size.height
         let imageViewBackground = UIImageView(frame: CGRect(x:0,y:0,width:width,height:height))
@@ -22,7 +23,7 @@ class SajuViewController: UIViewController {
         self.view.addSubview(imageViewBackground)
         self.view.sendSubview(toBack: imageViewBackground)
         if (users.count == 0) {
-            userInfoLabel.text = "In order to use this page, you should go to Today's fortune view and add a user and comback. If you already added some user(s), please go to today's fortune and come back to this page again."
+            userInfoLabel.text = "In order to use this page, you should go to Today's fortune view and add a user and comback. Thank you!"
             lunarLabel.text = "No Info"
         }
         else {
@@ -63,5 +64,7 @@ class SajuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    private func loadUsers() -> [User]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: User.ArchiveURL.path) as? [User]
+    }
 }
